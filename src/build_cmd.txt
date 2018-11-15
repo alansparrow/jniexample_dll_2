@@ -1,0 +1,26 @@
+https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_HowTo.html#Set-JAVA_HOME
+https://www3.ntu.edu.sg/home/ehchua/programming/java/JavaNativeInterface.html
+
+package:
+1. g++ for x64
+2. chere: chere -i -t mintty -s bash (https://stackoverflow.com/questions/9637601/open-cygwin-at-a-specific-folder)
+
+x86_64-w64-mingw32-gcc -I"$JAVA_HOME\include" -I"$JAVA_HOME\include\win32" -shared -o sdk.dll sdk_JNIClassA.cpp sdk_JNIClassB.cpp
+x86_64-w64-mingw32-gcc -I"$JAVA_HOME\include" -I"$JAVA_HOME\include\win32" -shared -o sdkA.dll sdk_JNIClassA.cpp
+x86_64-w64-mingw32-gcc -I"$JAVA_HOME\include" -I"$JAVA_HOME\include\win32" -shared -o sdkB.dll sdk_JNIClassB.cpp
+
+C:\Users\baotrungtn\Desktop\Projects\Java\JNIExample\out\production\JNIExample>java app/Main
+
+
+
+
+
+
+========== Example ==========
+x86_64-w64-mingw32-gcc -I"$JAVA_HOME\include" -I"$JAVA_HOME\include\win32" -shared -o hello.dll HelloJNI.cpp
+
+x86_64-w64-mingw32-gcc -c -I"$JAVA_HOME\include" -I"$JAVA_HOME\include\win32" HelloJNI.cpp
+
+x86_64-w64-mingw32-gcc -shared -o hello.dll HelloJNI.o
+
+java -Djava.library.path=. HelloJNI
