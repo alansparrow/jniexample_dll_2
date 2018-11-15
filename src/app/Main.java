@@ -8,6 +8,14 @@ public class Main {
         System.loadLibrary("./sdk/sdk");
         System.out.println("load sdk.dll successfully");
 
+
+        /*
+        * Notes:
+        * sdk.dll is newest
+        * sdk.dll override sdkA.dll but not sdkB.dll
+        * I don't know why
+        * 
+        * */
         //System.loadLibrary("./sdk/sdkA");
         //System.out.println("load sdkA.dll successfully");
 
