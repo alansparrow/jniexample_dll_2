@@ -2,6 +2,7 @@ package app;
 
 import sdk.JNIClassA;
 import sdk.JNIClassB;
+import sdk.TestJNIPrimitive;
 
 public class Main {
     static {
@@ -14,7 +15,7 @@ public class Main {
         * sdk.dll is newest
         * sdk.dll override sdkA.dll but not sdkB.dll
         * I don't know why
-        * 
+        *
         * */
         //System.loadLibrary("./sdk/sdkA");
         //System.out.println("load sdkA.dll successfully");
@@ -40,6 +41,10 @@ public class Main {
         jniClassB.booleanMethod(false);
         jniClassB.stringMethod("JNIClassB");
         jniClassB.intArrayMethod(intArrB);
+
+        double result = new TestJNIPrimitive().calcJNIAverage(10, 25);
+        System.out.println("TestJNIPrimitive().calcJNIAverage: " + result);
+
 
         System.out.println("Done!");
     }

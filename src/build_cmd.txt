@@ -9,6 +9,8 @@ x86_64-w64-mingw32-gcc -I"$JAVA_HOME\include" -I"$JAVA_HOME\include\win32" -shar
 x86_64-w64-mingw32-gcc -I"$JAVA_HOME\include" -I"$JAVA_HOME\include\win32" -shared -o sdkA.dll sdk_JNIClassA.cpp
 x86_64-w64-mingw32-gcc -I"$JAVA_HOME\include" -I"$JAVA_HOME\include\win32" -shared -o sdkB.dll sdk_JNIClassB.cpp
 
+x86_64-w64-mingw32-gcc -I"$JAVA_HOME\include" -I"$JAVA_HOME\include\win32" -shared -o TestJNIPrimitive.dll sdk_TestJNIPrimitive.cpp
+
 C:\Users\baotrungtn\Desktop\Projects\Java\JNIExample\out\production\JNIExample>java app/Main
 
 
